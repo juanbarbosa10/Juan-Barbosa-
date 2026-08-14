@@ -1,1 +1,93 @@
+/* style.css */
 
+/* Importar una fuente moderna (opcional, pero se ve mejor) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9; /* Un gris/azul muy clarito para el fondo */
+    color: #333333; /* Texto oscuro para buena lectura */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido */
+}
+
+h1 {
+    color: #0033a0; /* Azul Millonarios */
+    border-bottom: 3px solid #0033a0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    color: #0033a0;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+/* Estilo para tu párrafo personalizado */
+.juanperro {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #0033a0; /* Fondo azul */
+    color: #ffffff; /* Letra blanca */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Cajas blancas para las listas para que resalten sobre el fondo */
+ul, ol {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px 40px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Colorear las viñetas y números de las listas de azul */
+ul li::marker, ol li::marker {
+    color: #0033a0;
+    font-weight: bold;
+}
+
+/* Estilo para la imagen */
+img {
+    max-width: 100%;
+    width: 450px; 
+    height: auto;
+    border: 5px solid #0033a0; /* Marco azul embajador */
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Convertir el enlace en un botón */
+a {
+    display: inline-block;
+    background-color: #0033a0;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 40px;
+}
+
+a:hover {
+    background-color: #001f66; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
