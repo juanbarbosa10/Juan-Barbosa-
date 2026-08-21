@@ -1,93 +1,157 @@
-/* style.css */
+/* ESTILO AZUL MILLONARIOS - BIEN CHIMBA */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
 
-/* Importar una fuente moderna (opcional, pero se ve mejor) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f6f9; /* Un gris/azul muy clarito para el fondo */
-    color: #333333; /* Texto oscuro para buena lectura */
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido */
+  background: linear-gradient(135deg, #0A1128 0%, #001F54 50%, #034078 100%);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+  background-size: 100% 100%, 200px 200px;
+  color: #E0E0E0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
+/* TITULO PRINCIPAL - COMO UN GOLAZO */
 h1 {
-    color: #0033a0; /* Azul Millonarios */
-    border-bottom: 3px solid #0033a0;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px #0077FF, 0 0 20px #0057B8, 3px 3px 0px #0A1128;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  animation: brillo 2s ease-in-out infinite alternate;
 }
 
+@keyframes brillo {
+  from { text-shadow: 0 0 10px #0077FF, 0 0 20px #0057B8, 3px 3px 0px #0A1128; }
+  to { text-shadow: 0 0 20px #00A6FF, 0 0 30px #0077FF, 3px 3px 0px #0A1128; }
+}
+
+/* SUBTITULO */
 h2 {
-    color: #0033a0;
-    margin-top: 30px;
-    text-transform: capitalize;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #00A6FF;
+  text-align: center;
+  margin: 30px 0 15px 0;
+  border-bottom: 3px solid #0077FF;
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
-/* Estilo para tu párrafo personalizado */
+/* PARRAFO - TU CLASE JUANPERRO */
 .juanperro {
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: #0033a0; /* Fondo azul */
-    color: #ffffff; /* Letra blanca */
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  text-align: center;
+  font-size: 1.3rem;
+  background: rgba(0, 119, 255, 0.2);
+  border-left: 5px solid #00A6FF;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  font-weight: 700;
+  backdrop-filter: blur(5px);
 }
 
-/* Cajas blancas para las listas para que resalten sobre el fondo */
+/* LISTAS - CON BALONES */
 ul, ol {
-    background-color: #ffffff;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    padding: 20px 40px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  margin: 20px auto;
+  background: rgba(0, 31, 84, 0.6);
+  padding: 25px 25px 25px 50px;
+  border-radius: 15px;
+  border: 2px solid #0077FF;
+  box-shadow: 0 8px 20px rgba(0, 119, 255, 0.3);
 }
 
-li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+ul li {
+  list-style: none;
+  position: relative;
+  padding: 10px 0;
+  font-size: 1.1rem;
 }
 
-/* Colorear las viñetas y números de las listas de azul */
-ul li::marker, ol li::marker {
-    color: #0033a0;
-    font-weight: bold;
+ul li::before {
+  content: "⚽";
+  position: absolute;
+  left: -30px;
+  font-size: 1.2rem;
+  animation: rodar 1.5s infinite;
 }
 
-/* Estilo para la imagen */
+@keyframes rodar {
+ 0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+ol li {
+  padding: 8px 0;
+  font-size: 1.1rem;
+  color: #00A6FF;
+  font-weight: 700;
+}
+
+/* IMAGEN */
 img {
-    max-width: 100%;
-    width: 450px; 
-    height: auto;
-    border: 5px solid #0033a0; /* Marco azul embajador */
-    border-radius: 10px;
-    margin: 30px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  max-width: 500px;
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 20px;
+  border: 4px solid #0077FF;
+  box-shadow: 0 0 30px rgba(0, 166, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Convertir el enlace en un botón */
+img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(0, 166, 255, 0.8);
+}
+
+/* LINK */
 a {
-    display: inline-block;
-    background-color: #0033a0;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 25px; /* Bordes redondeados */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-bottom: 40px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #0077FF, #00A6FF);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 119, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
 a:hover {
-    background-color: #001f66; /* Azul más oscuro al pasar el ratón */
-    transform: scale(1.05); /* Efecto de crecimiento */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 166, 255, 0.6);
+  background: linear-gradient(90deg, #00A6FF, #0077FF);
+}
+
+/* EFECTO CANCHA DE FONDO */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 31, 84, 0.9), rgba(0, 31, 84, 0.9)),
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.05) 40px, rgba(255,255,255,0.05) 41px);
+  z-index: -1;
+  pointer-events: none;
 }
